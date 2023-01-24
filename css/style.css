@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white-mp: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-sh: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 10px;
+  width: 340px;
+  height: 900px;
+  margin: 80px 0;
+}
+
+.content .image {
+  background-image: linear-gradient(
+    #4a006da2, #4a006da2
+    ),
+    url(../images/image-header-mobile.jpg);
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 15px;
+  opacity: 0;
+}
+
+.info .text {
+  text-align: center;
+  padding: 30px;
+}
+
+.info .text h1 {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+.info .text h1 span {
+  color: var(--soft-violet);
+}
+
+.info .text p {
+  color: var(--slightly-transparent-white-mp);
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 25px;
+}
+
+.info .numbers {
+  font-family: "Lexend Deca", sans-serif;
+  text-align: center;
+}
+
+.info .numbers p {
+  color: var(--slightly-transparent-white-sh);
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin-bottom: 25px;
+  line-height: 27px;
+}
+
+.info .numbers p:last-child span {
+  text-transform: uppercase;
+}
+
+.info .numbers span {
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: none;
+}
+
+/* standard code that comes with the challenge */
+footer .attribution {
+  font-size: 14px;
+  text-align: center;
+  color: var(--white); /* original was black */
+  padding-bottom: 5px; /* original had no padding */
+}
+footer .attribution a {
+  color: var(--white); /* original was  */
+}
+
+/* width: 1440px */
+@media (min-width: 1440px) {
+  main {
+    height: 100vh;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    width: 1150px;
+    height: 446px;
+  }
+
+  .content .image {
+    background-image: linear-gradient(
+      #4a006da2, #4a006da2
+      ),
+      url(../images/image-header-desktop.jpg);
+      border-radius: 0 10px 10px 0;
+  }
+
+  .image img {
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 0;
+    width: 540px;
+  }
+
+  .info {
+    order: 0;
+  }
+
+  .image {
+    order: 1;
+  }
+
+  .info .text {
+    padding: 70px 120px 40px 70px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info .text h1 {
+    font-size: 2.5em;
+  }
+
+  .info .numbers {
+    display: flex;
+    flex-direction: row;
+    padding: 0 70px;
+    gap: 60px;
+    text-align: left;
+  }
+
+  footer .attribution {
+    margin-top: -25px;
+  }
+}
